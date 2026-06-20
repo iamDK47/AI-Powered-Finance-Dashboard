@@ -12,11 +12,11 @@ result = ','.join(coins)
 # The_url = "https://api.coingecko.com/api/v3/coins/list"
 # The_url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&names=Bitcoin&symbols=btc&category=layer-1&price_change_percentage=1h"
 # The_url = "https://api.coingecko.com/api/v3/coins/bitcoin"
-The_url = "https://api.coingecko.com/api/v3/coins/bitcoin/tickers?exchange_ids=bybit"
+# The_url = "https://api.coingecko.com/api/v3/coins/bitcoin/tickers?exchange_ids=bybit"
 # The_url = "https://api.coingecko.com/api/v3/coins/bitcoin/history?date=30-12-2023"
 # The_url = "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1"
 # The_url = "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=1711929600&to=1712275200"
-# The_url = "https://api.coingecko.com/api/v3/coins/bitcoin/ohlc?vs_currency=usd"
+The_url = "https://api.coingecko.com/api/v3/coins/bitcoin/ohlc?vs_currency=usd&days=1"
 
 custom_header = {
  "x-cg-demo-api-key": os.getenv('API_KEY')
