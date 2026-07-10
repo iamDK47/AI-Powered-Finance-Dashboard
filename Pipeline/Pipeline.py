@@ -1,52 +1,58 @@
 import requests
+# import datetime from datetime
 import json
 import os
 from dotenv import load_dotenv
 load_dotenv()
+import time
 
 beta_API = {'bitcoin' : {'usd' : 69420.96}}
 Mock_API = False
 
-coins = ['bitcoin,ethereum,solana,cardano,ripple']
+coins = ['BTCUSDT,ETHUSDT,SOLUSDT,ADAUSDT,XRPUSDT']
 result = ','.join(coins)
 
-# The_url = f"https://api.coingecko.com/api/v3/simple/price?vs_currencies=usd&ids={result}"
-The_url = f"https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids={result}&price_change_percentage=1h"
-# The_url = "https://api.coingecko.com/api/v3/coins/bitcoin/ohlc?vs_currency=usd&days=1"
-# The_url = "https://api.coingecko.com/api/v3/coins/bitcoin"
-# The_url = "https://api.coingecko.com/api/v3/coins/bitcoin/tickers?exchange_ids=bybit"
-# The_url = "https://api.coingecko.com/api/v3/coins/bitcoin/history?date=01-01-2026"
-# The_url = "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=365"
-# The_url = "https://api.coingecko.com/api/v3/search?query=bitcoin"
-# The_url = "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=1711929600&to=1712275200"
-# The_url = "https://api.coingecko.com/api/v3/coins/list"
-# The_url = "https://api.coingecko.com/api/v3/search/trending"
-
-custom_header = {
- "x-cg-demo-api-key": os.getenv('API_KEY')
-}
+# The_url = "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h&limit=500"
+The_url = "https://api.binance.com/api/v3/depth?symbol=BTCUSDT&limit=5000"
 
 
+while True:
+  try:
 
-try:
+    if Mock_API:
+      mock_result = beta_API['bitcoin']['usd']
+      print(f"BETA API WORKING price is ${mock_result:,}")
+      print()
 
-  if Mock_API:
-    mock_result = beta_API['bitcoin']['usd']
-    print(f"BETA API WORKING price is ${mock_result:,}")
-    print()
+    else:
+      # response = requests.get(The_url, headers=custom_header)
+      response = requests.get(The_url)
 
-  else:
-    response = requests.get(The_url, headers=custom_header)
+      if response.status_code == 200:
+        print("api is working")
+        with open('response.json', 'w') as f:
+          json.dump(response.json(), f, indent=2)
+          # json.dump([response.json(),dict(response.headers), int(response.status_code)], f, indent=2)
 
-    if response.status_code == 200:
-      print("api is working")
-      print(response.json())
-      # with open('response.json', 'w') as f:
-      #   json.dump(response.json(), f, indent=2)
+      elif response.status_code == 429:
+        retry_time = int(response.headers.get('Retry-After'))
+        print("STOOOOOOOP!!!!!!!")
+        print(f"try after {retry_time}")
+        time.sleep(retry_time)
+        continue
 
-    else:  
-      print("failed to connect")
-      print(response.text)
+      else:  
+        print("failed to connect")
+        print(response.text)
+        
 
-except Exception as err:
-  print(f"error caught: {err}")
+  except Exception as err:
+    print(f"error caught: {err}")
+    
+
+# for time intervals
+# for TS,P in btc_price['prices']:
+#   dt = datetime.fromtimestamp(TS/1000).strftime("%Y-%m-%d %H:%M:%S")
+#   new_prices.append((dt,P))
+
+
