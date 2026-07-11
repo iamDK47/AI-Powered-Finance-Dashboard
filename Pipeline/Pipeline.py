@@ -9,12 +9,11 @@ import time
 beta_API = {'bitcoin' : {'usd' : 69420.96}}
 Mock_API = False
 
-coins = ['BTCUSDT,ETHUSDT,SOLUSDT,ADAUSDT,XRPUSDT']
+coins = ['BTCUSDT','ETHUSDT','BNBUSDT','SOLUSDT','ADAUSDT','XRPUSDT','DOGEUSDT',]
 result = ','.join(coins)
 
-# The_url = "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h&limit=500"
-The_url = "https://api.binance.com/api/v3/depth?symbol=BTCUSDT&limit=5000"
 
+All_data = []
 
 while True:
   try:
@@ -25,30 +24,30 @@ while True:
       print()
 
     else:
-      # response = requests.get(The_url, headers=custom_header)
-      response = requests.get(The_url)
 
-      if response.status_code == 200:
-        print("api is working")
-        with open('response.json', 'w') as f:
-          json.dump(response.json(), f, indent=2)
-          # json.dump([response.json(),dict(response.headers), int(response.status_code)], f, indent=2)
+      for coin in coins:
+        response = requests.get(f"https://api.binance.com/api/v3/klines?symbol={coin}&interval=1h&limit=1")
 
-      elif response.status_code == 429:
-        retry_time = int(response.headers.get('Retry-After'))
-        print("STOOOOOOOP!!!!!!!")
-        print(f"try after {retry_time}")
-        time.sleep(retry_time)
-        continue
+        if response.status_code == 200:
+          print("api is working")
+          All_data.append(response.json())
+          with open('response.json', 'w') as f:
+            json.dump([All_data,dict(response.headers)], f, indent=2)
 
-      else:  
-        print("failed to connect")
-        print(response.text)
+        elif response.status_code == 429:
+          retry_time = int(response.headers.get('Retry-After'))
+          print("STOOOOOOOP!!!!!!!")
+          print(f"try after {retry_time}")
+          time.sleep(retry_time)
+          continue
+
+        else:
+          print("failed to connect")
+          print(response.text)
         
 
   except Exception as err:
     print(f"error caught: {err}")
-    
 
 # for time intervals
 # for TS,P in btc_price['prices']:
@@ -56,3 +55,37 @@ while True:
 #   new_prices.append((dt,P))
 
 
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+# url = 'https://api.binance.com/api/v3/ticker/24hr'
+
+# try:
+
+#   if Mock_API:
+#     mock_result = beta_API['bitcoin']['usd']
+#     print(f"BETA API WORKING price is ${mock_result:,}")
+#     print()
+
+#   else:
+
+#       response = requests.get(url)
+
+#       if response.status_code == 200:
+#         print("api is working")
+#         All_data.append(response.json())
+#         with open('response.json', 'w') as f:
+#           json.dump([response.json(),dict(response.headers), int(response.status_code)], f, indent=2)
+
+#       elif response.status_code == 429:
+#         retry_time = int(response.headers.get('Retry-After'))
+#         print("STOOOOOOOP!!!!!!!")
+#         print(f"try after {retry_time}")
+#         time.sleep(retry_time)
+
+#       else:
+#         print("failed to connect")
+#         print(response.text)
+
+# except Exception as err:
+#   print(f"error caught: {err}")
