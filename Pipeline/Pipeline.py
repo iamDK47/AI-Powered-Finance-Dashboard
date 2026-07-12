@@ -1,18 +1,33 @@
-# import datetime from datetime
-# import os
+import psycopg2 
+import os
 from dotenv import load_dotenv
+import datetime from datetime
 load_dotenv()
 from pipelineExc import twenty_coins
 
 coins = ['BTCUSDT','ETHUSDT','BNBUSDT','XRPUSDT','SOLUSDT','TRXUSDT','DOGEUSDT','XLMUSDT','ZECUSDT','ADAUSDT','LINKUSDT','GRAMUSDT','DEXEUSDT','LTCUSDT','HBARUSDT','UNIUSDT','SUIUSDT','AVAXUSDT','SHIBUSDT','NEARUSDT']
 
-twenty_coins(coins)
+All_data = twenty_coins
 
+load_dotenv()
 
+conn = psycopg2.connect(
+    host="localhost",
+    dbname="Crypto_Analytics",
+    user="postgres",
+    password= os.getenv("DB_Password"),
+    port=5432
+)
 
+cur = conn.cursor()
 
+cur.execute("""
+            INSERT INTO global_crypto_data()
+            """)
 
-
+conn.commit()
+cur.close()
+conn.close()
 
 
 
