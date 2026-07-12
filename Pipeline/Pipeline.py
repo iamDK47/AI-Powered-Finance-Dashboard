@@ -1,53 +1,34 @@
-import requests
 # import datetime from datetime
-import json
-import os
+# import os
 from dotenv import load_dotenv
 load_dotenv()
-import time
+from pipelineExc import twenty_coins
 
-beta_API = {'bitcoin' : {'usd' : 69420.96}}
-Mock_API = False
+coins = ['BTCUSDT','ETHUSDT','BNBUSDT','XRPUSDT','SOLUSDT','TRXUSDT','DOGEUSDT','XLMUSDT','ZECUSDT','ADAUSDT','LINKUSDT','GRAMUSDT','DEXEUSDT','LTCUSDT','HBARUSDT','UNIUSDT','SUIUSDT','AVAXUSDT','SHIBUSDT','NEARUSDT']
 
-coins = ['BTCUSDT','ETHUSDT','BNBUSDT','SOLUSDT','ADAUSDT','XRPUSDT','DOGEUSDT',]
-result = ','.join(coins)
+twenty_coins(coins)
 
 
-All_data = []
 
-while True:
-  try:
 
-    if Mock_API:
-      mock_result = beta_API['bitcoin']['usd']
-      print(f"BETA API WORKING price is ${mock_result:,}")
-      print()
 
-    else:
 
-      for coin in coins:
-        response = requests.get(f"https://api.binance.com/api/v3/klines?symbol={coin}&interval=1h&limit=1")
 
-        if response.status_code == 200:
-          print("api is working")
-          All_data.append(response.json())
-          with open('response.json', 'w') as f:
-            json.dump([All_data,dict(response.headers)], f, indent=2)
 
-        elif response.status_code == 429:
-          retry_time = int(response.headers.get('Retry-After'))
-          print("STOOOOOOOP!!!!!!!")
-          print(f"try after {retry_time}")
-          time.sleep(retry_time)
-          continue
 
-        else:
-          print("failed to connect")
-          print(response.text)
-        
 
-  except Exception as err:
-    print(f"error caught: {err}")
+
+
+
+
+
+
+
+
+
+
+
+
 
 # for time intervals
 # for TS,P in btc_price['prices']:
