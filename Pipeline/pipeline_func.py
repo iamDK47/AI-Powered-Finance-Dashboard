@@ -2,6 +2,7 @@ import requests
 import json
 import time
 from datetime import datetime
+# from dataclasses import dataclass
 
 
 def transform_kline(raw,coin):
@@ -72,6 +73,8 @@ def fetch_klines(coins):
                 print(f"{error}")
                 exec_count += 1
                 continue
+
     with open('response.json', 'w') as f:
         json.dump(all_data,f,indent =2)
+        
     return all_data
