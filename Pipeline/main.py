@@ -1,39 +1,27 @@
-import psycopg2
+from pipeline_func import fetch_klines
+from database import load_kline
+import psycopg2 
 import os
 from dotenv import load_dotenv
 load_dotenv()
-from pipeline_func import fetch_klines
-# import datetime from datetime
 
 coins = ['BTCUSDT','ETHUSDT','BNBUSDT','XRPUSDT','SOLUSDT','TRXUSDT','DOGEUSDT','XLMUSDT','ZECUSDT','ADAUSDT','LINKUSDT','GRAMUSDT','DEXEUSDT','LTCUSDT','HBARUSDT','UNIUSDT','SUIUSDT','AVAXUSDT','SHIBUSDT','NEARUSDT']
 
+conn = psycopg2.connect(
+        host="localhost",
+        dbname="Crypto_Analytics",
+        user="postgres",
+        password = os.getenv("DB_Password"),
+        port=5432
+    )
+
 all_data = fetch_klines(coins)
 
-conn = psycopg2.connect(
-    host="localhost",
-    dbname="Crypto_Analytics",
-    user="postgres",
-    password = os.getenv("DB_Password"),
-    port=5432
-)
+load_kline(all_data, conn)
 
-cur = conn.cursor()
-
-cur.execute("""
-            INSERT INTO global_crypto_data (ticker,open_time,open,high,low,close,coin_volume,quote_asset_volume,total_trades,market_buy_volume,market_buy_quote_volume,delta,close_Time)
-            VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s.%s)
-            for 
-            (all_data[])
-            """)
 
 conn.commit()
-cur.close()
 conn.close()
-
-
-
-
-
 
 
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
