@@ -1,7 +1,7 @@
 import requests
 import json
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 # from dataclasses import dataclass
 
 
@@ -21,7 +21,7 @@ def transform_kline(raw,coin):
             }
 
 def convert_time(raw_time):
-    return datetime.fromtimestamp(raw_time/1000).strftime("%Y-%m-%d %H:%M:%S") 
+    return datetime.fromtimestamp(raw_time/1000 , tz=timezone.utc).strftime("%Y-%m-%d %H:%M:%S") 
 
 def fetch_klines(coins):
 
@@ -37,15 +37,15 @@ def fetch_klines(coins):
                 params = {
                     'symbol': coin,
                     'interval': '1m',
-                    'limit': 1
+                    'limit': 500
                 }
 
                 response = requests.get(url, params=params)
 
                 if response.status_code == 200:
                     print("API working")
-                    raw = response.json()[0]
-                    all_data.append(transform_kline(raw,coin))        
+                    for raw in response.json():
+                        all_data.append(transform_kline(raw,coin))        
                     
                     check_limit = response.headers.get('x-mbx-used-weight-1m')
                     if int(check_limit) > 5400:
