@@ -1,11 +1,15 @@
+import requests
+import json
+import time
 from pipeline_func import fetch_klines
 from database import load_kline
-import psycopg2 
+from pipeline_func import fetch_major_assets
+import psycopg2
 import os
 from dotenv import load_dotenv
 load_dotenv()
 
-coins = ['BTCUSDT','ETHUSDT','BNBUSDT','XRPUSDT','SOLUSDT','TRXUSDT','DOGEUSDT','XLMUSDT','ZECUSDT','ADAUSDT','LINKUSDT','GRAMUSDT','DEXEUSDT','LTCUSDT','HBARUSDT','UNIUSDT','SUIUSDT','AVAXUSDT','SHIBUSDT','NEARUSDT']
+ticker_by_price, ticker_by_volume, top_300price_chg, top_300vol_chg = fetch_major_assets()
 
 conn = psycopg2.connect(
         host="localhost",
@@ -15,7 +19,7 @@ conn = psycopg2.connect(
         port=5432
     )
 
-all_data = fetch_klines(coins)
+all_data = fetch_klines(ticker_by_price[:20])
 
 load_kline(all_data, conn)
 
@@ -29,20 +33,16 @@ conn.close()
 
 # url = 'https://api.binance.com/api/v3/ticker/24hr'
 
+# all_data = []
+
 # try:
-
-#   if Mock_API:
-#     mock_result = beta_API['bitcoin']['usd']
-#     print(f"BETA API WORKING price is ${mock_result:,}")
-#     print()
-
-#   else:
 
 #       response = requests.get(url)
 
 #       if response.status_code == 200:
 #         print("api is working")
-#         All_data.append(response.json())
+#         all_data.append(response.json())
+#         print(len(all_data[0]))
 #         with open('response.json', 'w') as f:
 #           json.dump([response.json(),dict(response.headers), int(response.status_code)], f, indent=2)
 

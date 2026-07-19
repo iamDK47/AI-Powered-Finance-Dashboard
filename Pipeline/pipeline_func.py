@@ -4,6 +4,34 @@ import time
 from datetime import datetime, timezone
 # from dataclasses import dataclass
 
+def fetch_major_assets():
+    url = 'https://api.binance.com/api/v3/ticker/24hr'
+
+    try:
+
+        response = (requests.get(url)).json()
+        
+        usdt_assets = [coin_data for coin_data in response 
+                            if coin_data['symbol'].endswith('USDT')]
+        
+        price_chg_300coin = sorted( usdt_assets, key=lambda x: float(x['priceChangePercent']), reverse=True)[:300]
+        volume_chg_300coin = sorted( usdt_assets, key=lambda x: float(x['quoteVolume']), reverse=True)[:300]
+
+        price_chg_300coin_ticker = [ticker['symbol'] for ticker in price_chg_300coin]
+        volume_chg_300coin_ticker = [ticker['symbol'] for ticker in volume_chg_300coin]
+
+    except Exception as error:
+        print(error)
+        return
+
+    return price_chg_300coin_ticker,volume_chg_300coin_ticker,price_chg_300coin,volume_chg_300coin
+
+def convert_time(raw_time):
+    return datetime.fromtimestamp(raw_time/1000 , tz=timezone.utc).strftime("%Y-%m-%d %H:%M:%S") 
+
+def raw_time(year, month, day, hour, minute, second):
+    dt = datetime(year, month, day, hour, minute, second, tzinfo=timezone.utc) 
+    return int(dt.timestamp() * 1000)
 
 def transform_kline(raw,coin):
     return {'ticker' : coin,
@@ -20,9 +48,6 @@ def transform_kline(raw,coin):
             'close_time' : convert_time(raw[6])
             }
 
-def convert_time(raw_time):
-    return datetime.fromtimestamp(raw_time/1000 , tz=timezone.utc).strftime("%Y-%m-%d %H:%M:%S") 
-
 def fetch_klines(coins):
 
     all_data =[]
@@ -36,8 +61,10 @@ def fetch_klines(coins):
                 url = "https://api.binance.com/api/v3/klines"
                 params = {
                     'symbol': coin,
-                    'interval': '1m',
-                    'limit': 500
+                    'interval': '1d',
+                    'limit': 500,
+                    'startTime' : raw_time(2026,6,1,0,0,0),
+                    'endTime' : raw_time(2026,6,30,0,0,0) 
                 }
 
                 response = requests.get(url, params=params)
@@ -50,7 +77,7 @@ def fetch_klines(coins):
                     check_limit = response.headers.get('x-mbx-used-weight-1m')
                     if int(check_limit) > 5400:
                         print("90 percent limit reached, API calls slowing down")
-                        time.sleep(2)
+                        time.sleep(4)
                     break
 
                 elif response.status_code == 429:
