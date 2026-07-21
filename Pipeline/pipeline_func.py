@@ -4,6 +4,31 @@ import time
 from datetime import datetime, timezone
 # from dataclasses import dataclass
 
+def transform_major_assets(price,vol):
+    price_chg = {
+    'ticker': price[0],
+    'open_time' : convert_time(price[16]),
+    'price_change' : float(price[1]),
+    'price_change_percent' : float(price[2]),
+    'vwap' : float(price[3]),
+    'volume' : float(price[14]),
+    'quote_volume' : float(price[15]),
+    'close_time' : convert_time(price[17])
+    }
+
+    vol_chg = {
+    'ticker': vol[0],
+    'open_time' : convert_time(price[16]),
+    'price_change' : float(vol[1]),
+    'price_change_percent' : float(vol[2]),
+    'vwap' : float(vol[3]),
+    'volume' : float(vol[14]),
+    'quote_volume' : float(vol[15]),
+    'close_time' : convert_time(price[17])
+    }
+
+    return price_chg, vol_chg
+
 def fetch_major_assets():
     url = 'https://api.binance.com/api/v3/ticker/24hr'
 
@@ -22,9 +47,11 @@ def fetch_major_assets():
 
     except Exception as error:
         print(error)
-        return
+        return None, None, None, None
+    
+    transformed_price_chg,transformed_vol_chg = transform_major_assets(price_chg_300coin, volume_chg_300coin)
 
-    return price_chg_300coin_ticker,volume_chg_300coin_ticker,price_chg_300coin,volume_chg_300coin
+    return price_chg_300coin_ticker,volume_chg_300coin_ticker,transformed_price_chg,transformed_vol_chg
 
 def convert_time(raw_time):
     return datetime.fromtimestamp(raw_time/1000 , tz=timezone.utc).strftime("%Y-%m-%d %H:%M:%S") 

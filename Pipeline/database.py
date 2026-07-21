@@ -11,3 +11,8 @@ def load_kline(all_data, conn):
                     (data["ticker"],data["open_time"],data["open"],data["high"],data["low"],data["close"],data["coin_volume"],data["quote_asset_volume"],data["total_trades"],data["market_buy_volume"],data["market_buy_quote_volume"],delta,data["close_time"])
                 )
             cur.close()
+
+def load_corr_cov(price_chg, vol_chg, conn):
+    with conn:
+        with conn.cursor() as curr:
+            for 
