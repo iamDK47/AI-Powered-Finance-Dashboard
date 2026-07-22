@@ -4,65 +4,79 @@ import time
 from datetime import datetime, timezone
 # from dataclasses import dataclass
 
-def transform_major_assets(price,vol):
-    price_chg = {
-    'ticker': price[0],
-    'open_time' : convert_time(price[16]),
-    'price_change' : float(price[1]),
-    'price_change_percent' : float(price[2]),
-    'vwap' : float(price[3]),
-    'volume' : float(price[14]),
-    'quote_volume' : float(price[15]),
-    'close_time' : convert_time(price[17])
+def transform_24h_ticker(raw):
+    return {
+        'ticker': raw['symbol'],
+        'open_time': convert_raw_time(raw['openTime']),
+        'price_change': float(raw['priceChange']),
+        'price_change_percent': float(raw['priceChangePercent']),
+        'vwap': float(raw['weightedAvgPrice']),
+        'volume': float(raw['volume']),
+        'quote_volume': float(raw['quoteVolume']),
+        'close_time': convert_raw_time(raw['closeTime'])
     }
 
-    vol_chg = {
-    'ticker': vol[0],
-    'open_time' : convert_time(price[16]),
-    'price_change' : float(vol[1]),
-    'price_change_percent' : float(vol[2]),
-    'vwap' : float(vol[3]),
-    'volume' : float(vol[14]),
-    'quote_volume' : float(vol[15]),
-    'close_time' : convert_time(price[17])
-    }
-
-    return price_chg, vol_chg
-
-def fetch_major_assets():
+def fetch_24h_tickers():
     url = 'https://api.binance.com/api/v3/ticker/24hr'
 
-    try:
-
-        response = (requests.get(url)).json()
-        
-        usdt_assets = [coin_data for coin_data in response 
-                            if coin_data['symbol'].endswith('USDT')]
-        
-        price_chg_300coin = sorted( usdt_assets, key=lambda x: float(x['priceChangePercent']), reverse=True)[:300]
-        volume_chg_300coin = sorted( usdt_assets, key=lambda x: float(x['quoteVolume']), reverse=True)[:300]
-
-        price_chg_300coin_ticker = [ticker['symbol'] for ticker in price_chg_300coin]
-        volume_chg_300coin_ticker = [ticker['symbol'] for ticker in volume_chg_300coin]
-
-    except Exception as error:
-        print(error)
-        return None, None, None, None
+    transformed_price_chg = []
+    transformed_vol_chg = []
+    price_chg_300coin_ticker = None
+    volume_chg_300coin_ticker = None
     
-    transformed_price_chg,transformed_vol_chg = transform_major_assets(price_chg_300coin, volume_chg_300coin)
+    max_count = 3
+    start_count = 0
 
+    while start_count < max_count:
+    
+        try:
+            response = requests.get(url)
+
+            if response.status_code == 200:
+            
+                usdt_assets = [coin_data for coin_data in response.json() 
+                                    if coin_data['symbol'].endswith('USDT')]
+                
+                price_chg_300coin = sorted( usdt_assets, key=lambda x: float(x['priceChangePercent']), reverse=True)[:300]
+                volume_chg_300coin = sorted( usdt_assets, key=lambda x: float(x['quoteVolume']), reverse=True)[:300]
+
+                price_chg_300coin_ticker = [ticker['symbol'] for ticker in price_chg_300coin]
+                volume_chg_300coin_ticker = [ticker['symbol'] for ticker in volume_chg_300coin]
+
+                for data in price_chg_300coin:
+                    transformed_price_chg.append(transform_24h_ticker(data))
+                
+                for data in volume_chg_300coin:
+                    transformed_vol_chg.append(transform_24h_ticker(data))
+                break
+
+            elif response.status_code == 429:
+                retry_time = int(response.headers.get('Retry-After', 30))
+                print('429 error, slowing down calls')
+                time.sleep(retry_time)
+                start_count += 1
+                continue
+
+            elif response.status_code == 418:
+                print('now youve done it')
+                break
+        
+        except Exception as error:
+            print(error)
+            return None, None, None, None
+    
     return price_chg_300coin_ticker,volume_chg_300coin_ticker,transformed_price_chg,transformed_vol_chg
 
-def convert_time(raw_time):
+def convert_raw_time(raw_time):
     return datetime.fromtimestamp(raw_time/1000 , tz=timezone.utc).strftime("%Y-%m-%d %H:%M:%S") 
 
-def raw_time(year, month, day, hour, minute, second):
+def convert_standard_time(year, month, day, hour, minute, second):
     dt = datetime(year, month, day, hour, minute, second, tzinfo=timezone.utc) 
     return int(dt.timestamp() * 1000)
 
 def transform_kline(raw,coin):
     return {'ticker' : coin,
-            'open_time' : convert_time(raw[0]),
+            'open_time' : convert_raw_time(raw[0]),
             'open' : float(raw[1]),
             'high' : float(raw[2]),
             'low' : float(raw[3]),
@@ -72,7 +86,7 @@ def transform_kline(raw,coin):
             'total_trades' : int(raw[8]),
             'market_buy_volume' : float(raw[9]),
             'market_buy_quote_volume' : float(raw[10]),
-            'close_time' : convert_time(raw[6])
+            'close_time' : convert_raw_time(raw[6])
             }
 
 def fetch_klines(coins):
@@ -90,8 +104,8 @@ def fetch_klines(coins):
                     'symbol': coin,
                     'interval': '1d',
                     'limit': 500,
-                    'startTime' : raw_time(2026,6,1,0,0,0),
-                    'endTime' : raw_time(2026,6,30,0,0,0) 
+                    'startTime' : convert_standard_time(2026,6,1,0,0,0),
+                    'endTime' : convert_standard_time(2026,6,30,0,0,0) 
                 }
 
                 response = requests.get(url, params=params)
@@ -132,3 +146,4 @@ def fetch_klines(coins):
         json.dump(all_data,f,indent =2)
         
     return all_data
+

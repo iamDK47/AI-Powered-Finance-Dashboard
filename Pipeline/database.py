@@ -12,7 +12,16 @@ def load_kline(all_data, conn):
                 )
             cur.close()
 
-def load_corr_cov(price_chg, vol_chg, conn):
+def load_corr_cov(by_price_chg, conn):
     with conn:
         with conn.cursor() as curr:
-            for 
+
+            for data in by_price_chg:
+                print(data['price_change'],data['price_change_percent'],data['vwap'],data['volume'],data['quote_volume'],data['close_time'])
+                curr.execute("""
+                    INSERT INTO corr_cov (ticker, open_time, price_change, price_change_percent, vwap, volume, quote_volume, close_time)
+                    VALUES (%s,%s,%s,%s,%s,%s,%s,%s)
+                    """,
+                    (data['ticker'],data['open_time'],data['price_change'],data['price_change_percent'],data['vwap'],data['volume'],data['quote_volume'],data['close_time'])
+                )
+            curr.close()
