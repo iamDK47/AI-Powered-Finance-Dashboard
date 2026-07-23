@@ -4,6 +4,85 @@ import time
 from datetime import datetime, timezone
 # from dataclasses import dataclass
 
+# "symbols": [
+#     {
+#       "symbol": "ETHBTC",
+#       "status": "TRADING",
+#       "baseAsset": "ETH",
+#       "baseAssetPrecision": 8,
+#       "quoteAsset": "BTC",
+#       "quotePrecision": 8,
+#       "quoteAssetPrecision": 8,
+#       "baseCommissionPrecision": 8,
+#       "quoteCommissionPrecision": 8,
+#       "orderTypes": [
+#         "LIMIT",
+#         "LIMIT_MAKER",
+#         "MARKET",
+#         "STOP_LOSS",
+#         "STOP_LOSS_LIMIT",
+#         "TAKE_PROFIT",
+#         "TAKE_PROFIT_LIMIT"
+#       ],
+#       "icebergAllowed": true,
+#       "ocoAllowed": true,
+#       "otoAllowed": true,
+#       "opoAllowed": true,
+#       "quoteOrderQtyMarketAllowed": true,
+#       "allowTrailingStop": true,
+#       "cancelReplaceAllowed": true,
+#       "amendAllowed": true,
+#       "pegInstructionsAllowed": true,
+#       "isSpotTradingAllowed": true,
+#       "isMarginTradingAllowed": true,
+#       "defaultSelfTradePreventionMode": "EXPIRE_MAKER",
+#       "allowedSelfTradePreventionModes": [
+#         "EXPIRE_TAKER",
+#         "EXPIRE_MAKER",
+#         "EXPIRE_BOTH",
+#         "DECREMENT",
+#         "TRANSFER"
+#       ]
+#     },
+# {
+#    'symbols[4]': [
+#        {
+#             "symbol": "ETHBTC",
+#             "status": "TRADING",
+#             "baseAsset": "ETH",
+#             "isSpotTradingAllowed": true,
+#             "isMarginTradingAllowed": true,
+
+#        }
+#    ]
+# }
+
+def validate_tickers():
+
+def exchange_info_instrument():
+
+    url = 'https://api.binance.com/api/v3/exchangeInfo'
+
+    transformed_ticker_dict = {}
+
+    try:
+        response = requests.get(url)
+
+        data = response.json()['symbols']
+        for coin in data:
+            if coin['status'] == 'TRADING' and coin['quoteAsset'] == 'USDT' and coin['isSpotTradingAllowed'] and coin['isMarginTradingAllowed']:
+
+                transformed_ticker_dict[coin['symbol']] = {
+                                        'status' : coin['status'],
+                                        'quote_asset' : coin['quoteAsset'],
+                                        'spot_trading_allowed' : coin['isSpotTradingAllowed'],
+                                        'margin_trading_allowed' : coin['isMarginTradingAllowed']
+                                           }
+    except Exception as err:
+        print(err)
+
+    return transformed_ticker_dict
+
 def transform_24h_ticker(raw):
     return {
         'ticker': raw['symbol'],
@@ -21,8 +100,8 @@ def fetch_24h_tickers():
 
     transformed_price_chg = []
     transformed_vol_chg = []
-    price_chg_300coin_ticker = None
-    volume_chg_300coin_ticker = None
+    ticker_by_price = None
+    ticker_by_volume = None
     
     max_count = 3
     start_count = 0
@@ -40,8 +119,8 @@ def fetch_24h_tickers():
                 price_chg_300coin = sorted( usdt_assets, key=lambda x: float(x['priceChangePercent']), reverse=True)[:300]
                 volume_chg_300coin = sorted( usdt_assets, key=lambda x: float(x['quoteVolume']), reverse=True)[:300]
 
-                price_chg_300coin_ticker = [ticker['symbol'] for ticker in price_chg_300coin]
-                volume_chg_300coin_ticker = [ticker['symbol'] for ticker in volume_chg_300coin]
+                ticker_by_price = [ticker['symbol'] for ticker in price_chg_300coin]
+                ticker_by_volume = [ticker['symbol'] for ticker in volume_chg_300coin]
 
                 for data in price_chg_300coin:
                     transformed_price_chg.append(transform_24h_ticker(data))
@@ -65,7 +144,7 @@ def fetch_24h_tickers():
             print(error)
             return None, None, None, None
     
-    return price_chg_300coin_ticker,volume_chg_300coin_ticker,transformed_price_chg,transformed_vol_chg
+    return ticker_by_price,ticker_by_volume,transformed_price_chg,transformed_vol_chg
 
 def convert_raw_time(raw_time):
     return datetime.fromtimestamp(raw_time/1000 , tz=timezone.utc).strftime("%Y-%m-%d %H:%M:%S") 
