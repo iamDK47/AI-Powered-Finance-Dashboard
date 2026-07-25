@@ -4,66 +4,11 @@ import time
 from datetime import datetime, timezone
 # from dataclasses import dataclass
 
-# "symbols": [
-#     {
-#       "symbol": "ETHBTC",
-#       "status": "TRADING",
-#       "baseAsset": "ETH",
-#       "baseAssetPrecision": 8,
-#       "quoteAsset": "BTC",
-#       "quotePrecision": 8,
-#       "quoteAssetPrecision": 8,
-#       "baseCommissionPrecision": 8,
-#       "quoteCommissionPrecision": 8,
-#       "orderTypes": [
-#         "LIMIT",
-#         "LIMIT_MAKER",
-#         "MARKET",
-#         "STOP_LOSS",
-#         "STOP_LOSS_LIMIT",
-#         "TAKE_PROFIT",
-#         "TAKE_PROFIT_LIMIT"
-#       ],
-#       "icebergAllowed": true,
-#       "ocoAllowed": true,
-#       "otoAllowed": true,
-#       "opoAllowed": true,
-#       "quoteOrderQtyMarketAllowed": true,
-#       "allowTrailingStop": true,
-#       "cancelReplaceAllowed": true,
-#       "amendAllowed": true,
-#       "pegInstructionsAllowed": true,
-#       "isSpotTradingAllowed": true,
-#       "isMarginTradingAllowed": true,
-#       "defaultSelfTradePreventionMode": "EXPIRE_MAKER",
-#       "allowedSelfTradePreventionModes": [
-#         "EXPIRE_TAKER",
-#         "EXPIRE_MAKER",
-#         "EXPIRE_BOTH",
-#         "DECREMENT",
-#         "TRANSFER"
-#       ]
-#     },
-# {
-#    'symbols[4]': [
-#        {
-#             "symbol": "ETHBTC",
-#             "status": "TRADING",
-#             "baseAsset": "ETH",
-#             "isSpotTradingAllowed": true,
-#             "isMarginTradingAllowed": true,
-
-#        }
-#    ]
-# }
-
-def validate_tickers():
-
 def exchange_info_instrument():
 
     url = 'https://api.binance.com/api/v3/exchangeInfo'
 
-    transformed_ticker_dict = {}
+    master_instrument = {}
 
     try:
         response = requests.get(url)
@@ -72,18 +17,29 @@ def exchange_info_instrument():
         for coin in data:
             if coin['status'] == 'TRADING' and coin['quoteAsset'] == 'USDT' and coin['isSpotTradingAllowed'] and coin['isMarginTradingAllowed']:
 
-                transformed_ticker_dict[coin['symbol']] = {
+                master_instrument[coin['symbol']] = {
                                         'status' : coin['status'],
                                         'quote_asset' : coin['quoteAsset'],
                                         'spot_trading_allowed' : coin['isSpotTradingAllowed'],
                                         'margin_trading_allowed' : coin['isMarginTradingAllowed']
                                            }
-    except Exception as err:
+
+    except Exception as err:  
         print(err)
 
-    return transformed_ticker_dict
+    with open('master-instrument.json', 'w') as f:
+        json.dump(master_instrument,f,indent=2)
+
+    return master_instrument
+
+def validate_tickers(symbol,master_instrument):
+
+    if symbol in master_instrument and master_instrument[symbol]['spot_trading_allowed']:
+        return True
+
 
 def transform_24h_ticker(raw):
+
     return {
         'ticker': raw['symbol'],
         'open_time': convert_raw_time(raw['openTime']),
@@ -98,10 +54,14 @@ def transform_24h_ticker(raw):
 def fetch_24h_tickers():
     url = 'https://api.binance.com/api/v3/ticker/24hr'
 
+    valid_tickers = []
     transformed_price_chg = []
     transformed_vol_chg = []
     ticker_by_price = None
     ticker_by_volume = None
+
+    with open('master-instrument.json', 'r') as f:
+            master_instrument = json.load(f)
     
     max_count = 3
     start_count = 0
@@ -113,11 +73,14 @@ def fetch_24h_tickers():
 
             if response.status_code == 200:
             
-                usdt_assets = [coin_data for coin_data in response.json() 
-                                    if coin_data['symbol'].endswith('USDT')]
-                
-                price_chg_300coin = sorted( usdt_assets, key=lambda x: float(x['priceChangePercent']), reverse=True)[:300]
-                volume_chg_300coin = sorted( usdt_assets, key=lambda x: float(x['quoteVolume']), reverse=True)[:300]
+                assets = response.json()
+
+                for coin in assets:
+                    if validate_tickers(coin['symbol'],master_instrument):
+                        valid_tickers.append(coin)
+
+                price_chg_300coin = sorted( valid_tickers, key=lambda x: float(x['priceChangePercent']), reverse=True)[:300]
+                volume_chg_300coin = sorted( valid_tickers, key=lambda x: float(x['quoteVolume']), reverse=True)[:300]
 
                 ticker_by_price = [ticker['symbol'] for ticker in price_chg_300coin]
                 ticker_by_volume = [ticker['symbol'] for ticker in volume_chg_300coin]
@@ -154,6 +117,7 @@ def convert_standard_time(year, month, day, hour, minute, second):
     return int(dt.timestamp() * 1000)
 
 def transform_kline(raw,coin):
+
     return {'ticker' : coin,
             'open_time' : convert_raw_time(raw[0]),
             'open' : float(raw[1]),

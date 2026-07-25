@@ -1,0 +1,2714 @@
+{
+  "BTCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ETHUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BNBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NEOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LTCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "QTUMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ADAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "XRPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "IOTAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "XLMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ONTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TRXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ETCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ICXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "VETUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "USDCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LINKUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ONGUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ZILUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ZRXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "FETUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BATUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ZECUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "IOSTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CELRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "DASHUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "THETAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ENJUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ATOMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TFUELUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ONEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ALGOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "DOGEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "DUSKUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ANKRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "WINUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MTLUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CVCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CHZUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BANDUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "XTZUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RVNUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "HBARUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "STXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "KAVAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ARPAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RLCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BCHUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "FTTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "OGNUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LSKUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BNTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MBLUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "COTIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SOLUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CTSIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "HIVEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CHRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "KNCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "COMPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ZENUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SNXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "VTHOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "DCRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "STORJUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MANAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "YFIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "JSTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CRVUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SANDUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NMRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "DOTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LUNAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RSRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PAXGUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TRBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SUSHIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "KSMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "EGLDUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "DIAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RUNEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "UMAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BELUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "UNIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SUNUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AVAXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "XVSUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AAVEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NEARUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "FILUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "INJUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AUDIOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CTKUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AXSUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "STRAXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ROSEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AVAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SKLUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GRTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "JUVUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PSGUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "1INCHUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "OGUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ATMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ASRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CELOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RIFUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CKBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TWTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SFPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "DODOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CAKEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ACMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ALICEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SUPERUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CFXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TKOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PUNDIXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TLMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SLPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SHIBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ICPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ARUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MASKUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LPTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GTCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PHAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "DEXEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "C98USDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "QNTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "FLOWUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MINAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RAYUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "REQUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "WAXPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GNOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "XECUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "DYDXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GALAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ILVUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "YGGUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "FIDAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AGLDUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RADUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RAREUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LAZIOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ADXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AUCTIONUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MOVRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CITYUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ENSUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "QIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PORTOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "POWRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "JASMYUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AMPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PYRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SANTOSUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BICOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "FLUXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CVXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PEOPLEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SPELLUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "JOEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ACHUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "IMXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GLMRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SCRTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "API3USDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BTTCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "WOOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ALPINEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ASTRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GMTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "APEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "STEEMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NEXOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LDOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "OPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "STGUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LUNCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GMXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "POLYXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "APTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "OSMOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "HFTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MAGICUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RPLUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GNSUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SYNUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SSVUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LQTYUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "USTCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GASUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GLMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PROMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "QKCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "IDUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ARBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "WBTCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "EDUUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SUIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PEPEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "FLOKIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MAVUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PENDLEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ARKMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "WBETHUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "WLDUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "FDUSDUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SEIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CYBERUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ARKUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TIAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MEMEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ORDIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BEAMXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "VICUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BLURUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "VANRYUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "JTOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "1000SATSUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BONKUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ACEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "XAIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MANTAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ALTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "JUPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PYTHUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RONINUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "DYMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PIXELUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "STRKUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PORTALUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AXLUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "WIFUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "METISUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AEVOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BOMEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ETHFIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ENAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "WUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TNSRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SAGAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TAOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "REZUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NOTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "IOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ZKUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LISTAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ZROUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BANANAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RENDERUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "DOGSUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "EURIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "POLUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NEIROUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TURBOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "1MBABYDOGEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CATIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "HMSTRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "EIGENUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SCRUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BNSOLUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LUMIAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "KAIAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "COWUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CETUSUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PNUTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ACTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "USUALUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ACXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ORCAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MOVEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "VELODROMEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "VANAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "1000CATUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PENGUUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BIOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AIXBTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CGPTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "COOKIEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SOLVUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TRUMPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ANIMEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BERAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "1000CHEEMSUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LAYERUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "HEIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "KAITOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SHELLUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "REDUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GPSUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "EPICUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BMTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "FORMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NILUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PARTIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MUBARAKUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TUTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BROCCOLI714USDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BANANAS31USDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GUNUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BABYUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ONDOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BIGTIMEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "VIRTUALUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "KERNELUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "WCTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "HYPERUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "INITUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SIGNUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "STOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SYRUPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "KMNOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SXTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NXPCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AWEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "HAEDALUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "USD1USDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "HUMAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SOPHUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RESOLVUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "HOMEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SPKUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NEWTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SAHARAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ERAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TREEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TOWNSUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PROVEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BFUSDUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PLUMEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "DOLOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MITOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "WLFIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SOMIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "OPENUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "USDEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LINEAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "HOLOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PUMPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AVNTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ZKCUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SKYUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BARDUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "0GUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "HEMIUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "XPLUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MIRAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "FFUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "EDENUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NOMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "2ZUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MORPHOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ASTERUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "WALUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "EULUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ENSOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "YBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ZBTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TURTLEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GIGGLEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "FUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "KITEUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MMTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SAPIENUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ALLOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BANKUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "METUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ATUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BREVUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "\u5e01\u5b89\u4eba\u751fUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ZKPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "UUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "FRAXUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "FOGOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RLUSDUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SENTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ZAMAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ESPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MANTRAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ROBOUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "OPNUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NIGHTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CFGUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "KATUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "XAUTUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "USDSUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CHIPUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MEGAUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AIGENSYNUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GENIUSUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "OPGUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MUBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CRCLBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NVDABUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SNDKBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TSLABUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SPCXBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "REUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AMDBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "EWYBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "INTCBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MSTRBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "LITEBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "METABUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MSFTBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "PLTRBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "QQQBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GRAMUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CBRSBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "COINBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "DRAMBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GLWBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "GOOGLBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NBISBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "QCOMBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SOXLBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SPYBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "WDCBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SKHYBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AAOIBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ARMBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AVGOBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "BABABUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "HOODBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "IBMBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MRVLBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "NOKBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TSMBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "RKLBBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AEROUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "AXTIBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "CRWVBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "INTWBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "KORUBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MUUBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "MVLLBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "ORCLBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "QNTBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "SNXXBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  },
+  "TQQQBUSDT": {
+    "status": "TRADING",
+    "quote_asset": "USDT",
+    "spot_trading_allowed": true,
+    "margin_trading_allowed": true
+  }
+}
