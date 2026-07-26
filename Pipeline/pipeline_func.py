@@ -13,6 +13,9 @@ def exchange_info_instrument():
     try:
         response = requests.get(url)
 
+        with open('response.json', 'w') as f:
+                json.dump(response.json(),f,indent=2)
+
         data = response.json()['symbols']
         for coin in data:
             if coin['status'] == 'TRADING' and coin['quoteAsset'] == 'USDT' and coin['isSpotTradingAllowed'] and coin['isMarginTradingAllowed']:
@@ -36,7 +39,6 @@ def validate_tickers(symbol,master_instrument):
 
     if symbol in master_instrument and master_instrument[symbol]['spot_trading_allowed']:
         return True
-
 
 def transform_24h_ticker(raw):
 
@@ -102,10 +104,16 @@ def fetch_24h_tickers():
             elif response.status_code == 418:
                 print('now youve done it')
                 break
-        
+
         except Exception as error:
             print(error)
             return None, None, None, None
+
+    with open('ticker_by_price.json', 'w') as f:
+        json.dump(ticker_by_price,f,indent=2)
+
+    with open('ticker_by_volume.json', 'w') as f:
+        json.dump(ticker_by_volume,f,indent=2)
     
     return ticker_by_price,ticker_by_volume,transformed_price_chg,transformed_vol_chg
 
@@ -132,11 +140,14 @@ def transform_kline(raw,coin):
             'close_time' : convert_raw_time(raw[6])
             }
 
-def fetch_klines(coins):
+def fetch_klines():
+
+    with open('ticker_by_price.json', 'r') as f:
+        ticker_by_price = json.load(f)
 
     all_data =[]
 
-    for coin in coins:
+    for coin in ticker_by_price[:150]:
         exec_count = 0
         max_retries = 3
         while exec_count < max_retries:
@@ -185,8 +196,7 @@ def fetch_klines(coins):
                 exec_count += 1
                 continue
 
-    with open('response.json', 'w') as f:
-        json.dump(all_data,f,indent =2)
+    # with open('response.json', 'w') as f:
+    #     json.dump(all_data,f,indent =2)
         
     return all_data
-
