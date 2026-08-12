@@ -1,4 +1,7 @@
-def load_kline(all_data, conn):
+from Pipeline.database.postgres_conn import postgres_conn
+
+def load_kline(all_data):
+    conn = postgres_conn()
     with conn.cursor() as cur:
 
         for data in all_data:
@@ -9,9 +12,11 @@ def load_kline(all_data, conn):
                 """,
                 (data["ticker"],data["open_time"],data["open"],data["high"],data["low"],data["close"],data["coin_volume"],data["quote_asset_volume"],data["total_trades"],data["market_buy_volume"],data["market_buy_quote_volume"],delta,data["close_time"])
             )
-        cur.close()
+    conn.commit()
+    conn.close()
 
-def load_corr_cov(by_price_chg, conn):
+def load_corr_cov(by_price_chg):
+    conn = postgres_conn()
     with conn.cursor() as curr:
 
         for data in by_price_chg:
@@ -21,4 +26,5 @@ def load_corr_cov(by_price_chg, conn):
                 """,
                 (data['ticker'],data['open_time'],data['price_change'],data['price_change_percent'],data['vwap'],data['volume'],data['quote_volume'],data['close_time'])
             )
-        curr.close()
+    conn.commit()
+    conn.close()

@@ -62,7 +62,7 @@ def fetch_24h_tickers():
     ticker_by_price = None
     ticker_by_volume = None
 
-    with open('master-instrument.json', 'r') as f:
+    with open('json_data/master-instrument.json', 'r') as f:
             master_instrument = json.load(f)
     
     max_count = 3
@@ -142,7 +142,7 @@ def transform_kline(raw,coin):
 
 def fetch_klines():
 
-    with open('ticker_by_price.json', 'r') as f:
+    with open('json_data/ticker_by_price.json', 'r') as f:
         ticker_by_price = json.load(f)
 
     all_data =[]
@@ -196,7 +196,4 @@ def fetch_klines():
                 exec_count += 1
                 continue
 
-    # with open('response.json', 'w') as f:
-    #     json.dump(all_data,f,indent =2)
-        
     return all_data

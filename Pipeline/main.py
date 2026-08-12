@@ -5,8 +5,8 @@
 from pipeline_func import exchange_info_instrument
 from pipeline_func import fetch_24h_tickers
 from pipeline_func import fetch_klines
-from database import load_kline
-from database import load_corr_cov
+from Pipeline.database.database import load_corr_cov
+from Pipeline.database.database import load_kline
 
 import numpy as np
 import pandas as pd
@@ -15,26 +15,15 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+
 # exchange_info_instrument()
 
-# ticker_by_price, ticker_by_volume, transformed_price_chg, transformed_vol_chg = fetch_24h_tickers()
+ticker_by_price, ticker_by_volume, transformed_price_chg, transformed_vol_chg = fetch_24h_tickers()
 
-all_data = fetch_klines()
+# all_data = fetch_klines()
 
-conn = psycopg2.connect(
-        host="localhost",
-        dbname="Crypto_Analytics",
-        user="postgres",
-        password = os.getenv("DB_Password"),
-        port=5432
-    )
-
-load_kline(all_data, conn)
-
-# load_corr_cov(transformed_price_chg, conn)
-
-conn.commit()
-conn.close()
+# load_kline(all_data)
+# load_corr_cov(transformed_vol_chg)
 
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
