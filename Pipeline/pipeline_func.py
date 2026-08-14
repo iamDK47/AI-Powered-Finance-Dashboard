@@ -13,8 +13,8 @@ def exchange_info_instrument():
     try:
         response = requests.get(url)
 
-        with open('response.json', 'w') as f:
-                json.dump(response.json(),f,indent=2)
+        # with open('response.json', 'w') as f:
+        #         json.dump(response.json(),f,indent=2)
 
         data = response.json()['symbols']
         for coin in data:
@@ -30,7 +30,7 @@ def exchange_info_instrument():
     except Exception as err:  
         print(err)
 
-    with open('master-instrument.json', 'w') as f:
+    with open('json_data/master-instrument.json', 'w') as f:
         json.dump(master_instrument,f,indent=2)
 
     return master_instrument
@@ -109,10 +109,10 @@ def fetch_24h_tickers():
             print(error)
             return None, None, None, None
 
-    with open('ticker_by_price.json', 'w') as f:
+    with open('json_data/ticker_by_price.json', 'w') as f:
         json.dump(ticker_by_price,f,indent=2)
 
-    with open('ticker_by_volume.json', 'w') as f:
+    with open('json_data/ticker_by_volume.json', 'w') as f:
         json.dump(ticker_by_volume,f,indent=2)
     
     return ticker_by_price,ticker_by_volume,transformed_price_chg,transformed_vol_chg

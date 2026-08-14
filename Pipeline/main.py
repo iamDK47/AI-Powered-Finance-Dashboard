@@ -5,8 +5,8 @@
 from pipeline_func import exchange_info_instrument
 from pipeline_func import fetch_24h_tickers
 from pipeline_func import fetch_klines
-from Pipeline.database.database import load_corr_cov
-from Pipeline.database.database import load_kline
+from database.database import load_corr_cov
+from database.database import load_kline
 
 import numpy as np
 import pandas as pd
@@ -16,14 +16,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-# exchange_info_instrument()
+exchange_info_instrument()
 
 ticker_by_price, ticker_by_volume, transformed_price_chg, transformed_vol_chg = fetch_24h_tickers()
 
-# all_data = fetch_klines()
+all_data = fetch_klines()
 
-# load_kline(all_data)
-# load_corr_cov(transformed_vol_chg)
+load_kline(all_data)
+load_corr_cov(transformed_vol_chg)
 
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 

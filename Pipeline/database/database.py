@@ -1,4 +1,4 @@
-from Pipeline.database.postgres_conn import postgres_conn
+from database.postgres_conn import postgres_conn
 
 def load_kline(all_data):
     conn = postgres_conn()
