@@ -2,6 +2,7 @@ import requests
 import json
 import time
 from datetime import datetime, timezone
+from concurrent.futures import ThreadPoolExecutor
 # from dataclasses import dataclass
 
 def exchange_info_instrument():
@@ -81,8 +82,8 @@ def fetch_24h_tickers():
                     if validate_tickers(coin['symbol'],master_instrument):
                         valid_tickers.append(coin)
 
-                price_chg_300coin = sorted( valid_tickers, key=lambda x: float(x['priceChangePercent']), reverse=True)[:300]
-                volume_chg_300coin = sorted( valid_tickers, key=lambda x: float(x['quoteVolume']), reverse=True)[:300]
+                price_chg_300coin = sorted( valid_tickers, key=lambda x: float(x['priceChangePercent']), reverse=True)[:500]
+                volume_chg_300coin = sorted( valid_tickers, key=lambda x: float(x['quoteVolume']), reverse=True)[:500]
 
                 ticker_by_price = [ticker['symbol'] for ticker in price_chg_300coin]
                 ticker_by_volume = [ticker['symbol'] for ticker in volume_chg_300coin]
@@ -140,14 +141,12 @@ def transform_kline(raw,coin):
             'close_time' : convert_raw_time(raw[6])
             }
 
-def fetch_klines():
-
-    with open('json_data/ticker_by_price.json', 'r') as f:
-        ticker_by_price = json.load(f)
-
-    all_data =[]
-
-    for coin in ticker_by_price[:150]:
+def fetch_klines(coins):
+    new_data = []
+    session = requests.session()
+    def fetch_coin(coin):
+        
+        all_data =[]
         exec_count = 0
         max_retries = 3
         while exec_count < max_retries:
@@ -159,10 +158,10 @@ def fetch_klines():
                     'interval': '1d',
                     'limit': 500,
                     'startTime' : convert_standard_time(2026,6,1,0,0,0),
-                    'endTime' : convert_standard_time(2026,6,30,0,0,0) 
+                    'endTime' : convert_standard_time(2026,6,30,0,0,0)
                 }
 
-                response = requests.get(url, params=params)
+                response = session.get(url, params=params)
 
                 if response.status_code == 200:
                     print("API working")
@@ -195,5 +194,16 @@ def fetch_klines():
                 print(f"{error}")
                 exec_count += 1
                 continue
+        return all_data
 
-    return all_data
+    total_time = time.perf_counter()
+    with ThreadPoolExecutor(max_workers=30) as executor:
+        all_data = list(executor.map(fetch_coin,coins))
+    end_time = time.perf_counter() - total_time
+    print(end_time)
+
+    for data in all_data:
+        new_data.extend(data)
+  
+    return new_data
+

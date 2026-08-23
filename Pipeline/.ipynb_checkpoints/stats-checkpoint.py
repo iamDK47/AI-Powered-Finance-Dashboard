@@ -19,10 +19,20 @@ def db_data():
 
         data = pd.read_sql(query, conn)
 
-        # coinz  = data['ticker'].unique()
-        # print("COWUSDT" in coinz)
         data_pivot = data.pivot(index = 'open_time' , columns='ticker', values='close')
-        # print(data_pivot)
+
+        # log_return = np.log(data_pivot / data_pivot.shift(1))
+
+        # sum = log_return['BTCUSDT'].sum()
+        # print(sum)
+
+        # df = pd.DataFrame(data)
+
+        # print(data)
+        print(data_pivot)
+        # print(log_return)
+        # print(log_return['BTCUSDT'])
+        # print(df)
 
     conn.commit()
     conn.close()
