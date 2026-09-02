@@ -197,13 +197,12 @@ def fetch_klines(coins):
         return all_data
 
     total_time = time.perf_counter()
-    with ThreadPoolExecutor(max_workers=30) as executor:
+    with ThreadPoolExecutor(max_workers=20) as executor:
         all_data = list(executor.map(fetch_coin,coins))
     end_time = time.perf_counter() - total_time
     print(end_time)
 
     for data in all_data:
         new_data.extend(data)
-  
-    return new_data
 
+    return new_data
