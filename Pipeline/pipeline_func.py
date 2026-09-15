@@ -157,8 +157,8 @@ def fetch_klines(coins):
                     'symbol': coin,
                     'interval': '1d',
                     'limit': 500,
-                    'startTime' : convert_standard_time(2026,6,1,0,0,0),
-                    'endTime' : convert_standard_time(2026,6,30,0,0,0)
+                    'startTime' : convert_standard_time(2026,1,1,0,0,0),
+                    'endTime' : convert_standard_time(2026,8,30,0,0,0)
                 }
 
                 response = session.get(url, params=params)
