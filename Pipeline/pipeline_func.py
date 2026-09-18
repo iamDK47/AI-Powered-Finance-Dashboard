@@ -1,6 +1,8 @@
 import requests
 import json
 import time
+import threading
+from functools import partial
 from datetime import datetime, timezone
 from concurrent.futures import ThreadPoolExecutor
 # from dataclasses import dataclass
@@ -142,40 +144,69 @@ def transform_kline(raw,coin):
             }
 
 def fetch_klines(coins):
+
+    class thread_limiter:
+        def __inti__ (self, weight_limit=6000, reset_time=60):
+            self.lock = threading.lock()
+            self.used_weight = 0
+            self.reset_time = reset_time
+            self.window_start = time.time()
+            self.weight_limit = weight_limit
+
+        def limit_check(self, ip_weight=2):
+            with self.lock():
+                now = time.time()
+                if now - self.window_start >= self.reset_time:
+                    self.used_weight = 0
+                    self.window_start = 0
+                elif self.used_weight + ip_weight >= self.weight_limit:
+                    sleep_for = self.reset_time - (now - self.window_start)
+                    time.sleep(max(sleep_for))
+                    self.used_weight = 0 
+                    self.window_start = time.time()
+                self.used_weight += ip_weight
+
+
     new_data = []
     session = requests.session()
-    def fetch_coin(coin):
+    def fetch_coin(coin,thread_limiter):
         
-        all_data =[]
-        exec_count = 0
-        max_retries = 3
-        while exec_count < max_retries:
+        all_data = []
+        start_time = convert_standard_time(2026,1,1,0,0,0)
+        end_time = convert_standard_time(2026,1,4,0,0,0)
+        # exec_count = 0
+        # max_retries = 3
+        while start_time < end_time:
             try:    
 
                 url = "https://api.binance.com/api/v3/klines"
                 params = {
                     'symbol': coin,
-                    'interval': '1d',
-                    'limit': 500,
-                    'startTime' : convert_standard_time(2026,1,1,0,0,0),
-                    'endTime' : convert_standard_time(2026,8,30,0,0,0)
+                    'interval': '1m',
+                    'limit': 1000,
+                    'startTime' : start_time,
+                    'endTime' : end_time
                 }
 
                 response = session.get(url, params=params)
 
                 if response.status_code == 200:
                     print("API working")
-                    for raw in response.json():
-                        all_data.append(transform_kline(raw,coin))        
+                    batch = response.json()
+                    for raw in batch:
+                        all_data.append(transform_kline(raw,coin))
+
+                    # converted start time from unix time, take the last array in batch, 6th index is time, add one to continue the API call for next batch according to time        
+                    start_time = batch[-1][6] + 1
                     
-                    check_limit = response.headers.get('x-mbx-used-weight-1m')
+                    check_limit = int(response.headers.get('x-mbx-used-weight-1m',0))
                     if int(check_limit) > 5400:
                         print("90 percent limit reached, API calls slowing down")
                         time.sleep(4)
                     break
 
                 elif response.status_code == 429:
-                    retry_time = int(response.headers.get('Retry-After',30))
+                    retry_time = int(response.headers.get('Retry-After',60))
                     print("STOPPP, TOO MANY REQUESTS")
                     time.sleep(retry_time)
                     exec_count += 1
