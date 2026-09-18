@@ -15,11 +15,11 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-exchange_info_instrument()
+# exchange_info_instrument()
 
-ticker_by_price, ticker_by_volume, transformed_price_chg, transformed_vol_chg = fetch_24h_tickers()
-with open('json_data/ticker_by_price.json', 'r') as f:
-            ticker_by_price = json.load(f)
+# ticker_by_price, ticker_by_volume, transformed_price_chg, transformed_vol_chg = fetch_24h_tickers()
+# with open('json_data/ticker_by_price.json', 'r') as f:
+#             ticker_by_price = json.load(f)
 
 with open('json_data/ticker_by_volume.json', 'r') as f:
     ticker_by_volume = json.load(f)
@@ -27,7 +27,7 @@ with open('json_data/ticker_by_volume.json', 'r') as f:
 data_by_volume = fetch_klines(ticker_by_volume)
 
 load_kline(data_by_volume)
-load_corr_cov(transformed_vol_chg)
+# load_corr_cov(transformed_vol_chg)
 
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 

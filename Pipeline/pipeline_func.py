@@ -146,22 +146,22 @@ def transform_kline(raw,coin):
 def fetch_klines(coins):
 
     class thread_limiter:
-        def __inti__ (self, weight_limit=6000, reset_time=60):
-            self.lock = threading.lock()
+        def __init__(self, weight_limit=6000, reset_time=60):
+            self.lock = threading.Lock()
             self.used_weight = 0
             self.reset_time = reset_time
             self.window_start = time.time()
             self.weight_limit = weight_limit
 
         def limit_check(self, ip_weight=2):
-            with self.lock():
+            with self.lock:
                 now = time.time()
                 if now - self.window_start >= self.reset_time:
                     self.used_weight = 0
-                    self.window_start = 0
+                    self.window_start = time.time()
                 elif self.used_weight + ip_weight >= self.weight_limit:
                     sleep_for = self.reset_time - (now - self.window_start)
-                    time.sleep(max(sleep_for))
+                    time.sleep(max(sleep_for),0)
                     self.used_weight = 0 
                     self.window_start = time.time()
                 self.used_weight += ip_weight
@@ -169,17 +169,14 @@ def fetch_klines(coins):
 
     new_data = []
     session = requests.session()
-    def fetch_coin(coin,thread_limiter):
-        
-        all_data = []
-        start_time = convert_standard_time(2026,1,1,0,0,0)
-        end_time = convert_standard_time(2026,1,4,0,0,0)
-        # exec_count = 0
-        # max_retries = 3
-        while start_time < end_time:
-            try:    
 
-                url = "https://api.binance.com/api/v3/klines"
+    def fetch_coin_batch(start_time, end_time, url, coin, limiter):
+        
+        exec_count = 0
+        max_retries = 3
+        while exec_count < max_retries:
+            limiter.limit_check()
+            try:    
                 params = {
                     'symbol': coin,
                     'interval': '1m',
@@ -192,18 +189,7 @@ def fetch_klines(coins):
 
                 if response.status_code == 200:
                     print("API working")
-                    batch = response.json()
-                    for raw in batch:
-                        all_data.append(transform_kline(raw,coin))
-
-                    # converted start time from unix time, take the last array in batch, 6th index is time, add one to continue the API call for next batch according to time        
-                    start_time = batch[-1][6] + 1
-                    
-                    check_limit = int(response.headers.get('x-mbx-used-weight-1m',0))
-                    if int(check_limit) > 5400:
-                        print("90 percent limit reached, API calls slowing down")
-                        time.sleep(4)
-                    break
+                    return response.json()
 
                 elif response.status_code == 429:
                     retry_time = int(response.headers.get('Retry-After',60))
@@ -225,11 +211,38 @@ def fetch_klines(coins):
                 print(f"{error}")
                 exec_count += 1
                 continue
+        return
+
+    def fetch_coin(coin,limiter):
+
+        all_data = []
+
+        start_time = convert_standard_time(2026,1,1,0,0,0)
+        end_time = convert_standard_time(2026,1,20,0,0,0)
+        url = "https://api.binance.com/api/v3/klines"
+
+        while start_time < end_time:
+            batch = fetch_coin_batch(start_time, end_time, url, coin, limiter)
+
+            if batch is None or len(batch) == 0:
+                break
+
+            for raw in batch:
+                all_data.append(transform_kline(raw, coin))
+
+            start_time = batch[-1][6] + 1
+
         return all_data
 
+
     total_time = time.perf_counter()
+
     with ThreadPoolExecutor(max_workers=20) as executor:
-        all_data = list(executor.map(fetch_coin,coins))
+
+        limiter = thread_limiter(weight_limit=6000, reset_time=60)
+        partial_func = partial(fetch_coin, limiter=limiter)
+        all_data = list(executor.map(partial_func,coins))
+
     end_time = time.perf_counter() - total_time
     print(end_time)
 
