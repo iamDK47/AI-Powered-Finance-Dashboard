@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/*
+  ============================================================
+  THEME — every color in the whole app is edited HERE, in one
+  place, and nowhere else. Every component below uses Tailwind
+  classes like bg-surface / text-accent / border-line rather
+  than hardcoded hex values, so changing a value in this block
+  re-colors the entire app.
+
+  Tailwind v4 (what this project uses) reads theme colors
+  straight from CSS custom properties instead of a separate
+  tailwind.config.js file — that's what the @theme block below
+  does: it turns each --color-x variable into usable Tailwind
+  utilities (bg-x, text-x, border-x, etc.).
+  ============================================================
+*/
+:root {
+  --background: #0a0e14;      /* page background */
+  --surface: #12171f;         /* card / panel background, one step lighter than background */
+  --surface-hover: #1a212c;
+  --foreground: #e6e9ef;      /* primary text */
+  --muted: #8b95a5;           /* secondary text */
+  --line: #232a36;            /* borders/dividers */
+
+  --accent: #22d3a5;          /* primary brand accent — buttons, active nav link, links */
+  --accent-hover: #1ab88d;
+
+  /* Financial convention: green = up/positive, red = down/negative.
+     Used by charts and any price-change display. */
+  --positive: #22c55e;
+  --negative: #ef4444;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-positive: var(--positive);
+  --color-negative: var(--negative);
+  /* System font stack — no external font fetch at build time. See the
+     comment in app/layout.tsx for why. Swap this for a next/font/local
+     variable later if you want a specific custom typeface. */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
