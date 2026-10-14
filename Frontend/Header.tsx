@@ -11,9 +11,6 @@ import { useAuth } from "./AuthProvider";
 const NAV_LINKS = [
   { href: "/", label: "Dashboard" },
   { href: "/charts", label: "Charts" },
-  { href: "/insights", label: "Insights" },
-  { href: "/docs", label: "Market Docs" },
-  { href: "/about", label: "About" },
 ];
 
 export function Header() {

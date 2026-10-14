@@ -1,7 +1,7 @@
 "use client";
 
-import { CorrelationMatrix } from "@/lib/types";
-import { chartColors } from "@/lib/chartColors";
+import { CorrelationMatrix } from "./types";
+import { chartColors } from "./chartColors";
 
 interface Props {
   matrix: CorrelationMatrix;

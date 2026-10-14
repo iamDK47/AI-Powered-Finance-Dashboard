@@ -9,8 +9,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { VolatilityPoint } from "@/lib/types";
-import { chartColors } from "@/lib/chartColors";
+import { VolatilityPoint } from "./types";
+import { chartColors } from "./chartColors";
 
 interface Props {
   data: VolatilityPoint[];

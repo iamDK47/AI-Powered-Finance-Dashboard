@@ -1,4 +1,4 @@
-import { Kline, LoginResponse } from "./types";
+import { CorrelationMatrix, Kline, LoginResponse, PctChangePoint, VolatilityPoint } from "./types";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
@@ -46,4 +46,31 @@ export async function getKlines(
     throw new Error(`Failed to fetch klines (${res.status})`);
   }
   return res.json();
+}
+
+async function getJson<T>(path: string, token: string): Promise<T> {
+  const res = await fetch(`${API_BASE_URL}${path}`, {
+    headers: { Authorization: `Bearer ${token}` },
+    cache: "no-store",
+  });
+  if (res.status === 401) throw new Error("UNAUTHORIZED");
+  if (!res.ok) throw new Error(`Request failed (${res.status})`);
+  return res.json() as Promise<T>;
+}
+
+export async function getTickers(token: string): Promise<string[]> {
+  const result = await getJson<{ tickers: string[] }>("/tickers", token);
+  return result.tickers;
+}
+
+export function getPerformance(token: string): Promise<Array<{ date: string; values: Record<string, number> }>> {
+  return getJson("/analytics/performance?limit=1000", token);
+}
+
+export function getVolatility(token: string, ticker: string): Promise<VolatilityPoint[]> {
+  return getJson(`/analytics/volatility?ticker=${encodeURIComponent(ticker)}&window=7&limit=1000`, token);
+}
+
+export function getCorrelation(token: string): Promise<CorrelationMatrix> {
+  return getJson("/analytics/correlation?limit=1000", token);
 }

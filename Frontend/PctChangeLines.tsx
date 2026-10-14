@@ -10,8 +10,8 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import { PctChangePoint } from "@/lib/types";
-import { chartColors, seriesPalette } from "@/lib/chartColors";
+import { PctChangePoint } from "./types";
+import { chartColors, seriesPalette } from "./chartColors";
 
 interface Props {
   data: PctChangePoint[];
