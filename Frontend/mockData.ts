@@ -47,8 +47,8 @@ export function generateMockPctChangeSeries(
   return points;
 }
 
-export function generateMockVolatilitySeries(days: number = 30): VolatilityPoint[] {
-  const rand = seededRandom(7);
+export function generateMockVolatilitySeries(days: number = 30, seed: number = 7): VolatilityPoint[] {
+  const rand = seededRandom(seed);
   const points: VolatilityPoint[] = [];
   const today = new Date();
   let level = 2.5;

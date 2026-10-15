@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, ReactNode } from "react";
 import { login as apiLogin } from "./api";
 import { AuthUser } from "./types";
 
@@ -40,27 +40,29 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setIsLoading(false);
   }, []);
 
-  async function login(username: string, password: string) {
+  const login = useCallback(async (username: string, password: string) => {
     const { access_token } = await apiLogin(username, password);
     const authUser: AuthUser = { username, token: access_token };
     setUser(authUser);
     setIsGuest(false);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(authUser));
-  }
+  }, []);
 
-  function continueAsGuest() {
+  const continueAsGuest = useCallback(() => {
     setIsGuest(true);
     setUser(null);
-  }
+  }, []);
 
-  function logout() {
+  const logout = useCallback(() => {
     setUser(null);
     setIsGuest(false);
     localStorage.removeItem(STORAGE_KEY);
-  }
+  }, []);
+
+  const value = useMemo(() => ({ user, isGuest, isLoading, login, continueAsGuest, logout }), [user, isGuest, isLoading, login, continueAsGuest, logout]);
 
   return (
-    <AuthContext.Provider value={{ user, isGuest, isLoading, login, continueAsGuest, logout }}>
+    <AuthContext.Provider value={value}>
       {children}
     </AuthContext.Provider>
   );

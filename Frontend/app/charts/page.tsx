@@ -43,10 +43,6 @@ export default function ChartsPage() {
         setTickers(available); setSelected(current => available.includes(current) ? current : (available[0] ?? ""));
         setPerformance(rawPerformance.map(point => ({ date: point.date, ...point.values })));
         setCorrelation(matrix);
-        if (available[0]) {
-          const vol = await getVolatility(token, available[0]);
-          if (!cancelled) setVolatility(vol);
-        }
       } catch (e) {
         if (!cancelled) {
           if (e instanceof Error && e.message === "UNAUTHORIZED") { logout(); router.replace("/login"); return; }
@@ -59,13 +55,18 @@ export default function ChartsPage() {
   }, [isLoading, user, isGuest, logout, router]);
 
   useEffect(() => {
-    if (!user || isGuest || !selected) return;
+    if (isGuest) {
+      const seed = selected.split("").reduce((total, character) => total + character.charCodeAt(0), 0);
+      setVolatility(generateMockVolatilitySeries(30, seed));
+      return;
+    }
+    if (busy || !user || isGuest || !selected) return;
     let cancelled = false;
     getVolatility(user.token, selected).then(value => { if (!cancelled) setVolatility(value); }).catch(e => {
       if (!cancelled && e instanceof Error && e.message === "UNAUTHORIZED") { logout(); router.replace("/login"); }
     });
     return () => { cancelled = true; };
-  }, [selected, user, isGuest, logout, router]);
+  }, [busy, selected, user, isGuest, logout, router]);
 
   if (isLoading || busy) return <div className="mx-auto max-w-6xl px-4 py-16 text-muted">Loading dashboard…</div>;
   return <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">

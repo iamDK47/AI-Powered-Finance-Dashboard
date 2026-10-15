@@ -1,20 +1,8 @@
 // Turns raw 1-minute Kline rows (what the backend's /klines endpoint
 // actually returns) into the daily-level series the charts need.
 //
-// DESIGN NOTE — read this before extending the Charts page:
-// Computing correlation/volatility here, in the browser, from raw klines
-// is a deliberate shortcut, not the "correct" final architecture. It
-// works today with ZERO new backend code, because the existing /klines
-// endpoint is all there is. The better long-term design is a backend
-// endpoint (e.g. GET /analytics/correlation) that does this computation
-// server-side with pandas — which is exactly the analysis.py work already
-// planned for the pipeline — and ships back a small, pre-computed payload
-// instead of raw rows. That avoids pulling potentially tens of thousands
-// of rows per asset into the browser just to collapse them down to ~30
-// daily points. Swap this file's functions for real API calls once that
-// endpoint exists; nothing in the chart components themselves would need
-// to change, since they only care about the final shaped data (see
-// PctChangePoint / VolatilityPoint / CorrelationMatrix in lib/types.ts).
+// The signed-in dashboard calls FastAPI's /analytics endpoints directly.
+// These helpers remain available for experiments with raw candle rows.
 
 import { Kline, PctChangePoint, VolatilityPoint, CorrelationMatrix } from "./types";
 

@@ -14,7 +14,7 @@ npm run dev
 
 Visit [http://localhost:3000](http://localhost:3000). Set `NEXT_PUBLIC_API_URL` in `.env.local` if FastAPI is not at `http://localhost:8000`. Restart Next.js after changing the environment file.
 
-To use real data, run FastAPI from the `Backend` folder, configure its `.env`, and make sure PostgreSQL contains the expected `global_crypto_data` table and data. Start at the project root README? Backend setup and table requirements are explained in [../Backend/README.md](../Backend/README.md). Use the configured admin username and the original password you hashed for the login screen. Or choose **Continue as guest**; the chart page then displays deterministic generated sample data and makes no API requests.
+To use real data, run FastAPI from the `Backend` folder, configure its `.env`, and make sure PostgreSQL contains the expected `global_crypto_data` table and data. Backend setup and table requirements are explained in [../Backend/README.md](../Backend/README.md). Use the configured admin username and the original password you hashed for the login screen. Or choose **Continue as guest**; the chart page then displays generated sample data and makes no API requests.
 
 ## What happens when you sign in
 
