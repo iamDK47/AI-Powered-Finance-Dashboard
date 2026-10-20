@@ -4,7 +4,6 @@ from datetime import datetime
 
 from fastapi import APIRouter, Depends, Query
 
-from app.api.core.security import get_current_user
 from app.api.database.connection import get_db
 from app.api.schemas.analytics import CorrelationMatrix, PctChangePoint, VolatilityPoint
 from app.api.services.analytics_service import correlation, pct_change, volatility
@@ -30,7 +29,6 @@ def performance(
     start: datetime | None = None,
     end: datetime | None = None,
     limit: int = Query(5000, ge=1, le=5000),
-    current_user: str = Depends(get_current_user),
     connection=Depends(get_db),
 ):
     """Return daily percent changes from the first shared date, by ticker."""
@@ -44,7 +42,6 @@ def get_volatility(
     start: datetime | None = None,
     end: datetime | None = None,
     limit: int = Query(5000, ge=1, le=5000),
-    current_user: str = Depends(get_current_user),
     connection=Depends(get_db),
 ):
     """Return rolling daily return volatility, expressed as a percentage."""
@@ -57,7 +54,6 @@ def get_correlation(
     start: datetime | None = None,
     end: datetime | None = None,
     limit: int = Query(5000, ge=1, le=5000),
-    current_user: str = Depends(get_current_user),
     connection=Depends(get_db),
 ) -> CorrelationMatrix:
     """Return the Pearson correlation matrix for daily asset returns."""

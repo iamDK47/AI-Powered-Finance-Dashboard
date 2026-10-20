@@ -6,10 +6,9 @@ export default function DashboardPage() {
       <section className="max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">OrderFlow · Crypto market dashboard</p>
         <h1 className="mt-5 text-5xl font-semibold tracking-tight text-foreground sm:text-7xl">See the market <span className="text-accent">in motion.</span></h1>
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">Compare price performance, explore rolling volatility, and see how crypto assets move together. Sign in to connect your market database, or use guest mode to explore with sample data.</p>
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">Explore market performance, rolling volatility, and how crypto assets move together using live dashboard data.</p>
         <div className="mt-9 flex flex-wrap gap-3">
-          <Link href="/login" className="rounded-md bg-accent px-5 py-3 font-semibold text-background hover:bg-accent-hover">Get started</Link>
-          <Link href="/charts" className="rounded-md border border-line px-5 py-3 font-semibold text-foreground hover:bg-surface">Open charts</Link>
+          <Link href="/charts" className="rounded-md bg-accent px-5 py-3 font-semibold text-background hover:bg-accent-hover">Open dashboard</Link>
         </div>
       </section>
       <section className="mt-20 grid gap-4 sm:grid-cols-3">

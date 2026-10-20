@@ -19,16 +19,6 @@ export interface Kline {
   close_time: string;
 }
 
-export interface LoginResponse {
-  access_token: string;
-  token_type: string;
-}
-
-export interface AuthUser {
-  username: string;
-  token: string;
-}
-
 // A point on the normalized "% change since start" line chart.
 export interface PctChangePoint {
   date: string;

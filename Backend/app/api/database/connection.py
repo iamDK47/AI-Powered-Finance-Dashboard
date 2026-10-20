@@ -26,6 +26,7 @@ def _get_pool() -> pool.ThreadedConnectionPool:
                         dbname=settings.db_name,
                         user=settings.db_user,
                         password=settings.db_password,
+                        sslmode=settings.db_sslmode,
                         connect_timeout=5,
                     )
                 except PsycopgError:

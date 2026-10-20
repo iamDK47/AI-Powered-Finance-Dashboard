@@ -16,13 +16,7 @@ class Settings(BaseSettings):
     db_name: str = "crypto_dashboard"
     db_user: str = "postgres"
     db_password: str = ""
-
-    jwt_secret_key: str
-    jwt_algorithm: str = "HS256"
-    access_token_expire_minutes: int = 720
-
-    admin_username: str
-    admin_password_hash: str
+    db_sslmode: str = "prefer"
 
     cors_origins: list[str] = ["http://localhost:3000"]
 
