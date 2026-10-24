@@ -3,7 +3,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import analytics, auth, market
+from app.api.routes import analytics, market
 from app.api.core.config import settings
 
 app = FastAPI(
@@ -15,12 +15,11 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origins,
-    allow_credentials=True,
-    allow_methods=["GET", "POST", "OPTIONS"],
-    allow_headers=["Authorization", "Content-Type"],
+    allow_credentials=False,
+    allow_methods=["GET", "OPTIONS"],
+    allow_headers=["Content-Type"],
 )
 
-app.include_router(auth.router)
 app.include_router(market.router)
 app.include_router(analytics.router)
 
