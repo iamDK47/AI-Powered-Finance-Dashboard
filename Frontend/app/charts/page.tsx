@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CorrelationHeatmap } from "../../CorrelationHeatmap";
-import { PctChangeLines } from "../../PctChangeLines";
-import { VolatilityChart } from "../../VolatilityChart";
-import { getCorrelation, getPerformance, getTickers, getVolatility } from "../../api";
-import { CorrelationMatrix, PctChangePoint, VolatilityPoint } from "../../types";
+import { CorrelationHeatmap } from "@/components/CorrelationHeatmap";
+import { PctChangeLines } from "@/components/PctChangeLines";
+import { VolatilityChart } from "@/components/VolatilityChart";
+import { getCorrelation, getPerformance, getTickers, getVolatility } from "@/lib/api";
+import { CorrelationMatrix, PctChangePoint, VolatilityPoint } from "@/types";
 
 export default function ChartsPage() {
   const [tickers, setTickers] = useState<string[]>([]);

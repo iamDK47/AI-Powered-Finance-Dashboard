@@ -1,4 +1,4 @@
-# OrderFlow frontend
+﻿# OrderFlow frontend
 
 A public crypto market dashboard built with Next.js App Router, React, TypeScript, Tailwind CSS v4, and Recharts. Visitors can view market performance, rolling volatility, and correlation charts without signing in. The frontend calls the public FastAPI API; the API reads market candles from PostgreSQL.
 
@@ -20,15 +20,16 @@ Set `NEXT_PUBLIC_API_URL` to the deployed API's public HTTPS URL in the frontend
 
 The frontend contains no login flow or secrets. `NEXT_PUBLIC_API_URL` is public configuration, not a secret. Do not place database credentials in frontend environment variables.
 
-## Pages and code
+## Project structure
 
-- `app/page.tsx` and `page.tsx` — landing page.
-- `app/charts/page.tsx` — fetches public API data and renders charts.
-- `app/layout.tsx` — shared HTML layout, header, and footer.
-- `api.ts` — typed HTTP requests to FastAPI.
-- `types.ts` — TypeScript interfaces for API data.
-- `PctChangeLines.tsx`, `VolatilityChart.tsx`, and `CorrelationHeatmap.tsx` — chart components.
+- `app/` â€” Next.js routes and shared layout/styles.
+- `components/` â€” reusable page components, including the header, footer, and charts.
+- `lib/` â€” API requests and analytics helpers.
+- `types/` â€” TypeScript data types shared across the frontend.
+- `constants/` â€” shared chart colors and palettes.
+- `package.json`, `next.config.ts`, and `tsconfig.json` â€” project configuration.
 
 The API endpoints are public and can be called directly by anyone. CORS controls browser access; it is not authentication or a request quota. Keep database credentials on the backend, and consider rate limiting and query monitoring before traffic grows.
 
 Useful commands: `npm run dev` starts development, `npm run typecheck` checks TypeScript, `npm run build` creates a production build, and `npm start` serves it.
+

@@ -4,7 +4,7 @@
 // The signed-in dashboard calls FastAPI's /analytics endpoints directly.
 // These helpers remain available for experiments with raw candle rows.
 
-import { Kline, PctChangePoint, VolatilityPoint, CorrelationMatrix } from "./types";
+import { Kline, PctChangePoint, VolatilityPoint, CorrelationMatrix } from "@/types";
 
 interface DailyPoint {
   date: string;

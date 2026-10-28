@@ -4,3 +4,6 @@ node_modules
 .venv
 zlinkedin.md
 zbackendREV.md
+render.yaml
+PROJECT_CONTEXT_FOR_CHATGPT.md
+DEPLOYMENT.md
