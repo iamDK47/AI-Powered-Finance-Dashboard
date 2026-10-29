@@ -16,7 +16,7 @@ The API is public and read-only. CORS only controls browser-origin access; it do
 
 ## Steps that require your provider accounts
 
-1. Ensure the latest project is pushed to a Git provider that Vercel and Render can access. From `Frontend`, run `npm install`, then `npm run build`; commit the generated `Frontend/package-lock.json` so installs are reproducible. The current environment could not complete the package download, so the frontend build has not been verified here.
+1. Push the project to a Git provider that Vercel and Render can access. `Frontend/package-lock.json` is now included for reproducible installs, and `npm run build` has completed successfully locally.
 2. Create a Neon project in a region near the API host. Check that the database fits the free storage and usage quotas. Use Neon's pooled connection endpoint when available.
 3. Import the existing PostgreSQL database into Neon. The API expects `global_crypto_data` and the columns listed in `Backend/README.md`; this project does not include an automatic schema/data migration.
 4. In Render, create a Blueprint instance from this repository and `render.yaml`. Enter the Neon database host, database name, username, and password when prompted. Keep those values in Render's backend environment only. Set `CORS_ORIGINS` to a temporary value such as `["http://localhost:3000"]` for the first API deploy.
